@@ -1,0 +1,33 @@
+<section class="page form-page">
+  <div class="form-card">
+    <h1>Add Task</h1>
+
+    <p *ngIf="message" class="message">{{ message }}</p>
+
+    <form (ngSubmit)="submitTask()" #taskForm="ngForm">
+      <div class="field">
+        <label for="title">Title</label>
+        <input id="title" name="title" [(ngModel)]="title" required />
+      </div>
+
+      <div class="field">
+        <label for="description">Description</label>
+        <textarea id="description" name="description" rows="4" [(ngModel)]="description"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="status">Status</label>
+        <select id="status" name="status" [(ngModel)]="status">
+          <option value="pending">Pending</option>
+          <option value="in-progress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+
+      <div class="actions">
+        <button type="submit" class="primary-button">Save Task</button>
+        <button type="button" class="secondary-button" routerLink="/tasks">Cancel</button>
+      </div>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,221 @@
+```css
+.page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(88, 28, 135, 0.18), transparent 35%),
+    radial-gradient(circle at 90% 90%, rgba(101, 76, 10, 0.10), transparent 35%),
+    linear-gradient(135deg, #07040d, #10091c 55%, #160b24);
+  padding: 32px 20px;
+  color: #e9e3f5;
+}
+
+.page-header {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 26px;
+  background: rgba(25, 15, 39, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(139, 92, 246, 0.16);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+}
+
+h1 {
+  margin: 0;
+  color: #d9f522;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  text-shadow: 0 0 18px rgba(217, 245, 34, 0.12);
+}
+
+.message {
+  max-width: 900px;
+  margin: 0 auto 16px;
+  padding: 14px 18px;
+  color: #c4a7f5;
+  font-weight: 600;
+  background: rgba(76, 29, 117, 0.16);
+  border: 1px solid rgba(139, 92, 246, 0.22);
+  border-left: 4px solid #8b5cf6;
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.empty-state {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(19, 11, 30, 0.88);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.16);
+  border-radius: 16px;
+  padding: 24px;
+  color: #a99bbd;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.task-list {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.task-card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(37, 22, 55, 0.94),
+    rgba(15, 9, 24, 0.97)
+  );
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(139, 92, 246, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+  padding: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.task-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #d9f522, #8b9e10);
+  opacity: 0.95;
+}
+
+.task-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(217, 245, 34, 0.3);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.55),
+    0 0 20px rgba(139, 92, 246, 0.08);
+}
+
+.task-card h2 {
+  margin: 0 0 12px;
+  color: #e7f58a;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.task-card p {
+  margin: 0 0 10px;
+  color: #b8adc8;
+  line-height: 1.7;
+  font-size: 0.97rem;
+}
+
+.task-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(139, 92, 246, 0.13);
+}
+
+.primary-button,
+.secondary-button,
+.danger-button {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 11px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+}
+
+.primary-button {
+  background: #d9f522;
+  color: #17120a;
+  border-color: rgba(217, 245, 34, 0.4);
+  box-shadow: 0 4px 15px rgba(217, 245, 34, 0.08);
+}
+
+.primary-button:hover {
+  background: #eaff52;
+  box-shadow: 0 6px 22px rgba(217, 245, 34, 0.18);
+  transform: translateY(-2px);
+}
+
+.secondary-button {
+  background: rgba(40, 25, 58, 0.85);
+  color: #d5c5eb;
+  border-color: rgba(139, 92, 246, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.secondary-button:hover {
+  background: rgba(65, 39, 91, 0.85);
+  color: #f0e8ff;
+  border-color: rgba(167, 139, 250, 0.4);
+  transform: translateY(-2px);
+}
+
+.danger-button {
+  background: rgba(76, 29, 117, 0.2);
+  color: #c4a7f5;
+  border-color: rgba(139, 92, 246, 0.2);
+}
+
+.danger-button:hover {
+  background: #4c1d75;
+  color: #f3e8ff;
+  border-color: #8b5cf6;
+  box-shadow: 0 5px 18px rgba(88, 28, 135, 0.2);
+  transform: translateY(-2px);
+}
+
+.primary-button:focus-visible,
+.secondary-button:focus-visible,
+.danger-button:focus-visible {
+  outline: 2px solid #d9f522;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 22px 14px;
+  }
+
+  .page-header {
+    padding: 18px;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  .task-card {
+    padding: 20px;
+  }
+
+  .task-actions {
+    gap: 10px;
+  }
+
+  .primary-button,
+  .secondary-button,
+  .danger-button {
+    padding: 10px 14px;
+  }
+}
